@@ -245,7 +245,7 @@ function Chat({initSt}){
       const r=await askClaude(nm.map(x=>({role:x.role,content:x.content})),st);
       setMsgs(p=>[...p,{role:'assistant',content:r}]);
     }catch{
-      setMsgs(p=>[...p,{role:'assistant',content:'🔌 Error de conexión. Verifica tu conexión a internet.'}]);
+      setMsgs(p=>[...p,{role:'assistant',content:'🔌 Error de conexión. Verifica tu conexión y vuelve aintentarlo.'}]);
     }
     setLoad(false);setTimeout(()=>inRef.current?.focus(),100);
   };
